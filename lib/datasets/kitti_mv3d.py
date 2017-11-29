@@ -33,7 +33,7 @@ class kitti_mv3d(datasets.imdb):
         self._subset = 'car'
         self._image_index = self._load_image_set_index()
         # Default to roidb handler
-
+        self.bounding_box = [0, 0, 601, 601] # define the image size 
         self._roidb_handler = self.gt_roidb
 
         self.config = {'top_k': 100000}
